@@ -1,4 +1,6 @@
-<?php namespace Illuminate\Workbench;
+<?php
+
+namespace Illuminate\Workbench;
 
 use Illuminate\Filesystem\Filesystem;
 
