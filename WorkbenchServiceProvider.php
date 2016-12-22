@@ -13,6 +13,16 @@ class WorkbenchServiceProvider extends ServiceProvider
      */
     protected $defer = false;
 
+    public function boot()
+    {
+
+        if ($this->app->runningInConsole()) {
+            $this->publishes([
+                __DIR__.'/../../config/workbench.php' => config_path('workbench.php'),
+            ], 'config');
+        }
+    }
+
     /**
      * Register the service provider.
      *
