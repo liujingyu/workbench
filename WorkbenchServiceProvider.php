@@ -20,7 +20,7 @@ class WorkbenchServiceProvider extends ServiceProvider
 
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__.'/../../config/workbench.php' => config_path('workbench.php'),
+                __DIR__.'/config/workbench.php' => config_path('workbench.php'),
             ], 'config');
         }
     }
